@@ -1,8 +1,7 @@
 .card {
-  height: 200px;
   width: 200px;
-  perspective: 1000px;
-
+  height: 200px;
+  
   &--inner {
     position: relative;
     width: 100%;
@@ -11,16 +10,19 @@
     transform-style: preserve-3d;
     transition: transform 150ms;
     transform: rotateY(var(--rotate-y, 0));
+    perspective: 1000px;
     cursor: pointer;
   }
 
-  &:hover &--inner {
+  &:hover &--inner,
+  &.flipped &--inner {
     --rotate-y: 180deg;
   }
 
   &--face {
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;

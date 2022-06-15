@@ -1,12 +1,24 @@
 import Grid from './components/Grid';
 import Card from './components/Card';
 import './App.scss';
+import { data } from './fixture';
 
 function App() {
   return (
     <div className='container'>
       <Grid>
-        <Card />
+        {data.map(({ id, jap, hir, eng }) => (
+          <Card
+            key={id}
+            frontFace={
+              <>
+                <h2>{jap}</h2>
+                {hir.length ? <span>{`(${hir})`}</span> : null}
+              </>
+            }
+            backFace={<h2>{eng}</h2>}
+          />
+        ))}
       </Grid>
     </div>
   );
