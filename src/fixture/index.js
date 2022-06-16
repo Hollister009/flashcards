@@ -192,3 +192,5 @@ export const data = [
     eng: 'barber',
   },
 ];
+
+// /view/:category

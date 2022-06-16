@@ -1,0 +1,12 @@
+.category-card {
+  min-height: 50px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba($color: #000000, $alpha: 0.25);
+  transition: all 200ms ease-in;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}

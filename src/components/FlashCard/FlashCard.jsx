@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './Card.scss';
+import './FlashCard.scss';
 
-function Card({ frontFace, backFace }) {
+function FlashCard({ frontFace, backFace }) {
   const [flipped, setFlipped] = useState(false);
   const toggleHandler = () => {
     setFlipped(!flipped);
@@ -17,4 +17,4 @@ function Card({ frontFace, backFace }) {
   );
 }
 
-export default Card;
+export default FlashCard;
