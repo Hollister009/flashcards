@@ -1,7 +1,11 @@
 .navbar {
-  background-color: white;
-  min-height: 60px;
+  position: sticky;
+  top: 0;
   padding: 10px;
+  min-height: 60px;
+  background-color: white;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
+  z-index: 2;
 
   &--links {
     list-style: none;

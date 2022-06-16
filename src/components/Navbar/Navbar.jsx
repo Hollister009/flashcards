@@ -3,6 +3,7 @@ import './Navbar.scss';
 
 const Navbar = () => (
   <nav className="navbar">
+    <h2>日本のフラッシュカード</h2>
     <ul className="navbar--links">
       <li>
         <Link to="/">Home</Link>

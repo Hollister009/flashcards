@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/Home';
 import CategoryPage from './pages/Category';
 
-import './App.scss';
 import { data } from './fixture';
 const categories = [
   {
