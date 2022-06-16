@@ -3,7 +3,7 @@ import Card from '../components/Card';
 
 function CategoryPage({ data = [] }) {
   return (
-    <div className='container'>
+    <div className="container">
       <Grid>
         {data.map(({ id, jap, hir, eng }) => (
           <Card

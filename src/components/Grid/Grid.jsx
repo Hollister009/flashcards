@@ -1,7 +1,5 @@
 import './Grid.scss';
 
-function Grid({ children }) {
-  return <div className='grid'>{children}</div>;
-}
+const Grid = ({ children }) => <div className="grid">{children}</div>;
 
 export default Grid;

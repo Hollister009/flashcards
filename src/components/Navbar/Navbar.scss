@@ -1,0 +1,12 @@
+.navbar {
+  background-color: white;
+  min-height: 60px;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  &--links {
+    list-style: none;
+    display: inline-flex;
+    gap: 10px;
+  }
+}
