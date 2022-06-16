@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "label": "職業 profession",
+      "name": "profession",
+      "data": [
+        {
+          "id": 1,
+          "jap": "理容師",
+          "hir": "りようし",
+          "eng": "barber"
+        },
+        {
+          "id": 2,
+          "jap": "美容師",
+          "hir": "びようし",
+          "eng": "beauty artist"
+        }
+      ]
+    }
+  ]
+}
