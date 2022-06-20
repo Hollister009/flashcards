@@ -1,7 +1,10 @@
 import PageLayout from '../components/PageLayout';
 import CategoryCard from '../components/CategoryCard';
+import { useFlashCards } from '../context';
 
-function HomePage({ categories = [] }) {
+function HomePage() {
+  const [categories] = useFlashCards();
+
   return (
     <PageLayout>
       <ul className="categories" style={{ listStyle: 'none' }}>

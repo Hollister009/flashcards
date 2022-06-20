@@ -4,17 +4,11 @@ export const FlashCardsContext = createContext(null);
 
 FlashCardsContext.displayName = 'FlashCardsContext';
 
-export const FlashCardsProvider = ({ children }) => {
-  const [categories, setCategories] = useState([]);
-  const value = [categories, setCategories];
-
-  return (
-    <FlashCardsContext.Provider value={value}>
-      {children}
-    </FlashCardsContext.Provider>
-  );
-};
-
+export const FlashCardsProvider = ({ children }) => (
+  <FlashCardsContext.Provider value={useState([])}>
+    {children}
+  </FlashCardsContext.Provider>
+);
 
 export const useFlashCards = () => {
   const context = useContext(FlashCardsContext);
