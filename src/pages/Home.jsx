@@ -1,9 +1,9 @@
 import PageLayout from '../components/PageLayout';
 import CategoryCard from '../components/CategoryCard';
-import { useFlashCards } from '../context';
+import { useCategories } from '../context';
 
 function HomePage() {
-  const [categories] = useFlashCards();
+  const [categories] = useCategories();
 
   return (
     <PageLayout>

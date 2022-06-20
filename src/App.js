@@ -1,11 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/Home';
 import CategoryPage from './pages/Category';
-import { useFlashCards } from './context';
+import { useCategories } from './context';
 
-import { data } from './fixture';
 // const categories = [
 //   {
 //     id: 1,
@@ -17,12 +16,13 @@ import { data } from './fixture';
 const URL = 'http://localhost:4000/categories';
 
 function App() {
-  const [, setCategories] = useFlashCards();
+  const [, setCategories] = useCategories();
   const isMounted = useRef(false);
-  async function fetchData() {
+
+  const fetchData = useCallback(async () => {
     const response = await fetch(URL).then((res) => res.json());
     setCategories(response);
-  }
+  }, [setCategories]);
 
   useEffect(() => {
     if (!isMounted.current) {
@@ -31,15 +31,15 @@ function App() {
 
     return () => {
       isMounted.current = true;
-    }
-  }, []);
+    };
+  }, [fetchData]);
 
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/categories/:id" element={<CategoryPage data={data} />} />
+        <Route path="/categories/:id" element={<CategoryPage />} />
       </Routes>
     </Router>
   );

@@ -1,8 +1,11 @@
 import PageLayout from '../components/PageLayout';
 import Grid from '../components/Grid';
 import FlashCard from '../components/FlashCard';
+import { useCategoryById } from '../context';
 
-function CategoryPage({ data = [] }) {
+function CategoryPage() {
+  const data = useCategoryById(1); // TODO: pass id from path parameter
+
   return (
     <PageLayout>
       <Grid>

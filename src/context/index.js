@@ -1,19 +1,23 @@
-import { createContext, useState, useContext } from 'react';
+import { useState } from 'react';
+import {
+  createContext,
+  useContext,
+  useContextSelector,
+} from 'use-context-selector';
 
 export const FlashCardsContext = createContext(null);
 
 FlashCardsContext.displayName = 'FlashCardsContext';
 
-export const FlashCardsProvider = ({ children }) => (
+export const FlashCardsContextProvider = ({ children }) => (
   <FlashCardsContext.Provider value={useState([])}>
     {children}
   </FlashCardsContext.Provider>
 );
 
-export const useFlashCards = () => {
-  const context = useContext(FlashCardsContext);
-  if (context === undefined) {
-    throw new Error('useFlashCards must be used within a FlashCardsProvider');
-  }
-  return context;
-};
+const categorySelector = (id) => (s) =>
+  s[0].find((c) => c.id === id)?.data || [];
+
+export const useCategories = () => useContext(FlashCardsContext);
+export const useCategoryById = (id) =>
+  useContextSelector(FlashCardsContext, categorySelector(id));
