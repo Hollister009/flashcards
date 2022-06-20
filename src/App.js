@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/Home';
 import CategoryPage from './pages/Category';
+import { useFlashCards } from './context';
 
 import { data } from './fixture';
 // const categories = [
@@ -16,7 +17,7 @@ import { data } from './fixture';
 const URL = 'http://localhost:4000/categories';
 
 function App() {
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useFlashCards();
   const isMounted = useRef(false);
   async function fetchData() {
     const response = await fetch(URL).then((res) => res.json());
