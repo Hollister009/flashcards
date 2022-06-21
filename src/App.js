@@ -5,14 +5,6 @@ import HomePage from './pages/Home';
 import CategoryPage from './pages/Category';
 import { useCategories } from './context';
 
-// const categories = [
-//   {
-//     id: 1,
-//     name: '職業 profession',
-//     category: 'profession',
-//   },
-// ];
-
 const URL = 'http://localhost:4000/categories';
 
 function App() {

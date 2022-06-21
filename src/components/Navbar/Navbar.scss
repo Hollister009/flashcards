@@ -6,10 +6,4 @@
   background-color: white;
   border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
   z-index: 2;
-
-  &--links {
-    list-style: none;
-    display: inline-flex;
-    gap: 10px;
-  }
 }
