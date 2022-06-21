@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaHeart } from 'react-icons/fa';
+import Badge from '../Badge';
 import './Navbar.scss';
 
 const Navbar = () => (
@@ -8,7 +9,9 @@ const Navbar = () => (
       <h2>日本のフラッシュカード</h2>
     </Link>
     <Link to="/learned" className="icon-wrapper">
-      <FaHeart />
+      <Badge content={2}>
+        <FaHeart />
+      </Badge>
     </Link>
   </nav>
 );
