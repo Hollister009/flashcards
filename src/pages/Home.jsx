@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
 import CategoryCard from '../components/CategoryCard';
+import List from '../components/List';
 import { useCategories } from '../context';
 
 function HomePage() {
@@ -7,13 +8,13 @@ function HomePage() {
 
   return (
     <PageLayout>
-      <ul className="categories" style={{ listStyle: 'none' }}>
+      <List>
         {categories.map(({ id, label }) => (
-          <li key={id}>
+          <List.Item key={id}>
             <CategoryCard id={id} label={label} />
-          </li>
+          </List.Item>
         ))}
-      </ul>
+      </List>
     </PageLayout>
   );
 }

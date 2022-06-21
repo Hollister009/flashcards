@@ -2,7 +2,7 @@
   "categories": [
     {
       "id": 1,
-      "label": "職業 profession",
+      "label": "職業(しょくぎょう) profession",
       "name": "profession",
       "data": [
         {
@@ -196,6 +196,73 @@
           "jap": "理容師",
           "hir": "りようし",
           "eng": "barber"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "あいさつ greetings",
+      "name": "greetings",
+      "data": [
+        {
+          "id": 1,
+          "jap": "",
+          "hir": "こんにちは",
+          "eng": "Hello"
+        },
+        {
+          "id": 2,
+          "jap": "",
+          "hir": "おはよう",
+          "eng": "Good morning"
+        },
+        {
+          "id": 3,
+          "jap": "",
+          "hir": "おはようございます",
+          "eng": "Good morning (polite)"
+        },
+        {
+          "id": 4,
+          "jap": "",
+          "hir": "こんばんは",
+          "eng": "Good evening"
+        },
+        {
+          "id": 5,
+          "jap": "",
+          "hir": "ありがとう",
+          "eng": "Thank you"
+        },
+        {
+          "id": 6,
+          "jap": "",
+          "hir": "ありがとうございます",
+          "eng": "Thank you (polite)"
+        },
+        {
+          "id": 7,
+          "jap": "",
+          "hir": "すみません",
+          "eng": "Excuse me"
+        },
+        {
+          "id": 8,
+          "jap": "",
+          "hir": "ごめんなさい",
+          "eng": "Sorry"
+        },
+        {
+          "id": 9,
+          "jap": "",
+          "hir": "じゃ、また",
+          "eng": "See you later"
+        },
+        {
+          "id": 10,
+          "jap": "",
+          "hir": "さようなら",
+          "eng": "Good bye"
         }
       ]
     }
