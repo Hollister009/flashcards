@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import './CategoryCard.scss';
 
-const CategoryCard = ({ label, category }) => (
-  <Link to={`categories/${category}`}>
+const CategoryCard = ({ id, label }) => (
+  <Link to={`categories/${id}`}>
     <div className="category-card">
       <p>{label}</p>
     </div>

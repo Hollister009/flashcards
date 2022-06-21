@@ -1,10 +1,12 @@
+import { useParams } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import Grid from '../components/Grid';
 import FlashCard from '../components/FlashCard';
 import { useCategoryById } from '../context';
 
 function CategoryPage() {
-  const data = useCategoryById(1); // TODO: pass id from path parameter
+  const { id } = useParams();
+  const data = useCategoryById(Number(id));
 
   return (
     <PageLayout>

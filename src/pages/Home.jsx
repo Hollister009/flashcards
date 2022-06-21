@@ -8,9 +8,9 @@ function HomePage() {
   return (
     <PageLayout>
       <ul className="categories" style={{ listStyle: 'none' }}>
-        {categories.map(({ id, label, name }) => (
+        {categories.map(({ id, label }) => (
           <li key={id}>
-            <CategoryCard label={label} category={name} />
+            <CategoryCard id={id} label={label} />
           </li>
         ))}
       </ul>
