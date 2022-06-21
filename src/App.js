@@ -1,9 +1,10 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useCategories } from './context';
 import Navbar from './components/Navbar';
 import HomePage from './pages/Home';
 import CategoryPage from './pages/Category';
-import { useCategories } from './context';
+import LearnedPage from './pages/Learned';
 
 const URL = 'http://localhost:4000/categories';
 
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/categories/:id" element={<CategoryPage />} />
+        <Route path="/learned" element={<LearnedPage />} />
       </Routes>
     </Router>
   );

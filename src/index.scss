@@ -13,8 +13,12 @@ a {
   text-decoration: none;
   color: #000000;
   transition: all linear 200ms;
-  
+
   &:hover {
-    color: aqua;
+    color: #7373e0;
   }
+}
+
+.icon-wrapper {
+  font-size: 22px;
 }
